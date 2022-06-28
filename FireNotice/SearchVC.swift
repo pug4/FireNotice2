@@ -81,8 +81,6 @@ extension SearchViewController: UITableViewDelegate {
         search.start { (response, error) in
             let coordinate = response?.mapItems[0].placemark.coordinate
             let alert = UIAlertController(title: "Enter Name for Location", message: "Name", preferredStyle: .alert)
-
-        
             alert.addTextField { (textField) in
                 textField.text = ""
             }

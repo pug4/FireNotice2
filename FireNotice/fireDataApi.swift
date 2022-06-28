@@ -11,7 +11,7 @@ import Firebase
 import FirebaseMessaging
 class FireData{
     
-    var boolthing = false
+    var FireNear = false
     func getData(lat: Double, lang: Double) -> Bool{
         let url = URL(string: "https://api.ambeedata.com/latest/fire?lat=\(lat)&lng=\(lang)")!
         var request = URLRequest(url: url)
@@ -24,11 +24,11 @@ class FireData{
             let JSONString = String(data: data, encoding: String.Encoding.utf8)
             print(JSONString!)
             if (JSONString?.contains("confidence"))! && JSONString!.contains("nominal") || JSONString!.contains("high"){
-                self.boolthing = true
+                self.FireNear = true
             }else{
-                self.boolthing = false
+                self.FireNear = false
             }
         }.resume()
-    return boolthing
+    return FireNear
     }
 }

@@ -18,7 +18,7 @@
 		EB57B3F4261E2A3C0032B6ED /* FireNotice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB57B3F2261E2A3C0032B6ED /* FireNotice.xcdatamodeld */; };
 		EB57B3F6261E2A3D0032B6ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB57B3F5261E2A3D0032B6ED /* Assets.xcassets */; };
 		EB57B3F9261E2A3D0032B6ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB57B3F7261E2A3D0032B6ED /* LaunchScreen.storyboard */; };
-		EB57B401261E2A770032B6ED /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57B400261E2A770032B6ED /* File.swift */; };
+		EB57B401261E2A770032B6ED /* fireDataApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57B400261E2A770032B6ED /* fireDataApi.swift */; };
 		EB57B403261E2AAE0032B6ED /* LoactionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57B402261E2AAE0032B6ED /* LoactionTableViewController.swift */; };
 		EB57B405261E2AC90032B6ED /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57B404261E2AC90032B6ED /* SearchVC.swift */; };
 		EB57B407261E2AE30032B6ED /* InformationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB57B406261E2AE30032B6ED /* InformationPage.swift */; };
@@ -43,7 +43,7 @@
 		EB57B3F3261E2A3C0032B6ED /* FireNotice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FireNotice.xcdatamodel; sourceTree = "<group>"; };
 		EB57B3F5261E2A3D0032B6ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB57B3F8261E2A3D0032B6ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EB57B400261E2A770032B6ED /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		EB57B400261E2A770032B6ED /* fireDataApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fireDataApi.swift; sourceTree = "<group>"; };
 		EB57B402261E2AAE0032B6ED /* LoactionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoactionTableViewController.swift; sourceTree = "<group>"; };
 		EB57B404261E2AC90032B6ED /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		EB57B406261E2AE30032B6ED /* InformationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationPage.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 			children = (
 				EB88B3C92623E06800A15D89 /* FireNotice.entitlements */,
 				EB065D612635177200C8A7EA /* PushNotifications */,
-				EB57B400261E2A770032B6ED /* File.swift */,
+				EB57B400261E2A770032B6ED /* fireDataApi.swift */,
 				EB57B3E9261E2A3C0032B6ED /* AppDelegate.swift */,
 				EB57B3EB261E2A3C0032B6ED /* SceneDelegate.swift */,
 				EB57B3ED261E2A3C0032B6ED /* ViewController.swift */,
@@ -174,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = Jayu;
 				TargetAttributes = {
 					EB57B3E5261E2A3C0032B6ED = {
@@ -263,7 +263,7 @@
 			files = (
 				EB57B403261E2AAE0032B6ED /* LoactionTableViewController.swift in Sources */,
 				EB065D652635177200C8A7EA /* PushNotificationSender.swift in Sources */,
-				EB57B401261E2A770032B6ED /* File.swift in Sources */,
+				EB57B401261E2A770032B6ED /* fireDataApi.swift in Sources */,
 				EB065D642635177200C8A7EA /* PushNotificationManager.swift in Sources */,
 				EB57B40E261E2AED0032B6ED /* UILabel+.swift in Sources */,
 				EB57B3EE261E2A3C0032B6ED /* ViewController.swift in Sources */,
@@ -326,6 +326,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -386,6 +387,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -422,7 +424,7 @@
 				CODE_SIGN_ENTITLEMENTS = FireNotice/FireNotice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H7T2QJ43JS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FireNotice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -443,7 +445,7 @@
 				CODE_SIGN_ENTITLEMENTS = FireNotice/FireNotice.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H7T2QJ43JS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FireNotice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

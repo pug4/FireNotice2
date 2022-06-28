@@ -103,9 +103,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         let currentLocation = location!.coordinate
-//        print(location!)
-//        print(currentLocation)
-// print(dataClass.getData(lat: currentLocation.latitude, lang: currentLocation.longitude))
         if self.dataClass.getData(lat: currentLocation.latitude, lang: currentLocation.longitude) == false{
             self.viewCustomizer.backgroundColor = UIColor(red: CGFloat(178/255.0), green: CGFloat(255/255.0), blue: CGFloat(89/255), alpha: CGFloat(1.0))
             self.warningLabel.text = "All clear!"
@@ -149,52 +146,3 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
 }
 
-//Database.database().reference().child("cordLad").observe(DataEventType.value, with: { (snapshot) in
-//        for i in 1...snapshot.childrenCount{
-//
-//            ref.observe(.value, with: { (snapshot) in
-//            let getData = snapshot.value as? [String:Any]
-//            let wins = getData?["long"+String(i)] as? String
-//            ref2.observe(.value, with: { (snapshot1) in
-//            let getData2 = snapshot1.value as? [String:Any]
-//            let wins2 = getData2?["lad"+String(i)] as? String
-//            let databaseCordsLong = Double(wins!)
-//            let databaseCordsLad = Double(wins2!)
-//            var fireLocation = CLLocationCoordinate2D()
-//            fireLocation.longitude = databaseCordsLong!
-//            fireLocation.latitude = databaseCordsLad!
-//
-//
-//            if currentLocation.longitude == fireLocation.longitude && currentLocation.latitude == fireLocation.latitude{
-//                self.trueOrfalse.append("True")
-//            }else if currentLocation.longitude + 0.0001 == fireLocation.longitude || currentLocation.latitude + 0.0001 == fireLocation.latitude{
-//                self.trueOrfalse.append("Close")
-//            }
-//            if currentLocation.latitude != fireLocation.latitude || currentLocation.longitude != fireLocation.longitude{
-//                self.warningLabel.text! = "No fires near"
-//                self.warningLabel.lineBreakMode = .byWordWrapping
-//                self.viewCustomizer.backgroundColor = UIColor(red: CGFloat(178/255.0), green: CGFloat(255/255.0), blue: CGFloat(89/255), alpha: CGFloat(1.0))
-//                self.trueOrfalse.append("False")
-//                self.warningLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-//            }
-//            if self.trueOrfalse.contains("True") == true{
-//                self.warningLabel.text! = "There is a fire near by!!"
-//                self.warningLabel.lineBreakMode = .byWordWrapping
-//                 self.warningLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-//                self.viewCustomizer.backgroundColor = .red
-//            }
-//            if self.trueOrfalse.contains("Close") == true{
-//                self.warningLabel.text! = "There is a fire very close by, you should consider evacuating"
-//                self.warningLabel.lineBreakMode = .byWordWrapping
-//                self.viewCustomizer.backgroundColor = .yellow
-//                 self.warningLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-//            }
-//        })
-//        })
-//        }
-//        })
-    //let infoClass = InformationPage()
-    //var databaseRef = Database.database().reference()
-//    public var trueOrfalse = [String]()
-    //var number = Int()
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
